@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        #coding {
+            background-color: rgba(239, 236, 243, 0.688);
+            border-radius: 15px;
+            font-family: courier, monospace;
+            padding: 15px 15px;
+        }
+        code{
+            color:rgb(0, 0, 0);
+        }
+        #navbar {
+        }
+    </style>
+</head>
+<body>
+    <div id="main-doc">
+        <div id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">JS Documentation
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+            <a class="nav-link" href="#intro">Introduction<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#know">What you should already know<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#hello">Hello world<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#var">Variables<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#declare">Declaring variables<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#scope">Variable scope<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#Global">Global variables<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#Constants">Constants<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#types">Data types<span class="sr-only"></span></a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </div>
+            </nav>
+            
+            
+        </div>
+        <section id="main-section">
+            <section id="intro">
+                <h2>Introduction</h2>
+                <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+            </section>
+            <section id="know">
+                <h2>What you should already know</h2>
+                <p>This guide assumes you have the following basic background:</p>
+            </section>
+            <section id="JavaScript_and_Java">
+                <h2>JavaScript and Java</h2>
+                <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+            </section>
+            <section id="hello">
+                <h2>Hello world</h2>
+                <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+                <div id="coding">
+                    <code >function greetMe(yourName) { alert("Hello " + yourName); }
+                        <br>
+                        greetMe("World");</code>
+                </div>
+                
+            </section>
+            <section id="var">
+                <h2>Variables</h2>
+                <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            </section>
+            <section id="declare">
+                <h2>Declaring variables</h2>
+                <p>You can declare a variable in three ways:</p>
+                <p>With the keyword var. For example,</p>
+                <div id="coding">
+                    <code >var x = 42.</code>
+                </div>
+                <p>By simply assigning it a value. For example,</p>
+                <div id="coding">
+                    <code >x = 42.</code>
+                </div>
+            </section>
+            <section id="scope">
+                <h2>Variable scope</h2>
+                <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+                <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+                <div id="coding">
+                    <code >if (true) { var x = 5; } console.log(x); // 5</code>
+                </div>
+            </section>
+            <section id="Global">
+                <h2>Global variables</h2>
+                <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+            </section>
+            <section id="Constants">
+                <h2>Constants</h2>
+                <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+                <div id="coding">
+                    <code >const PI = 3.14;</code>
+                </div>
+            </section>
+            <section id="types">
+                <h2>Data types</h2>
+                <p>The latest ECMAScript standard defines seven data types:</p>
+                <ul>
+                    <li>Six data types that are primitives:</li>
+                        <ul>
+                            <li>Boolean. true and false.</li>
+                            <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+                            <li>undefined. A top-level property whose value is undefined.</li>
+                            <li>Number. 42 or 3.14159.</li>
+                            <li>String. "Howdy"</li>
+                            <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                        </ul>
+                    <li>and Object</li>
+                </ul>
+            </section>
+        </section>
+        
+    </div>
+</body>
+</html>
